@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces Variable', ui-serif, Georgia, serif;
+
+  --color-cream: #f7f2ea;
+  --color-cream-dark: #efe6d8;
+  --color-espresso: #2c2019;
+  --color-espresso-soft: #3b2a20;
+  --color-terracotta: #c1653d;
+  --color-terracotta-dark: #a34f2d;
+  --color-gold: #c99a4a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Scroll-reveal: elements start hidden, JS toggles .is-visible via IntersectionObserver. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

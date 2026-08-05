@@ -1,0 +1,34 @@
+---
+import { sections, testimonials } from '../content';
+
+const { eyebrow, title } = sections.testimonials;
+---
+
+<section class="bg-cream-dark px-6 py-20 md:px-12 md:py-32">
+  <div class="mx-auto max-w-6xl">
+    <div data-reveal class="mb-12 max-w-2xl">
+      <p class="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-terracotta">
+        {eyebrow}
+      </p>
+      <h2 class="font-serif text-4xl leading-tight text-espresso md:text-5xl">
+        {title}
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+      {testimonials.map((t) => (
+        <div data-reveal>
+          <p class="text-terracotta" aria-hidden="true">
+            {'★'.repeat(Math.round(t.rating))}
+          </p>
+          <p class="mt-4 font-serif text-xl leading-relaxed text-espresso md:text-2xl">
+            “{t.quote}”
+          </p>
+          <p class="mt-4 text-sm text-espresso/60">
+            {t.author} · {t.rating}/5 · {t.source}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

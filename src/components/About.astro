@@ -1,0 +1,26 @@
+---
+import { sections, photos } from '../content';
+import Photo from './Photo.astro';
+
+const { eyebrow, title, paragraphs } = sections.about;
+---
+
+<section class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 py-20 md:grid-cols-2 md:gap-16 md:px-12 md:py-32">
+  <div data-reveal class="overflow-hidden rounded-xl">
+    <Photo photo={photos.about} class="h-full w-full object-cover" />
+  </div>
+
+  <div data-reveal>
+    <p class="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-terracotta">
+      {eyebrow}
+    </p>
+    <h2 class="font-serif text-4xl leading-tight text-espresso md:text-5xl">
+      {title}
+    </h2>
+    <div class="mt-6 space-y-4">
+      {paragraphs.map((p) => (
+        <p class="text-base leading-relaxed text-espresso/80 md:text-lg">{p}</p>
+      ))}
+    </div>
+  </div>
+</section>

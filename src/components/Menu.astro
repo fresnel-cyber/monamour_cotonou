@@ -1,0 +1,44 @@
+---
+import { sections, photos } from '../content';
+import Photo from './Photo.astro';
+
+const { eyebrow, title, intro, items } = sections.menu;
+
+const photoByKey = {
+  burger: photos.menu.burger,
+  tartine: photos.menu.tartine,
+  brunch: photos.menu.brunch,
+  patisserie: photos.menu.patisserie,
+} as const;
+---
+
+<section class="bg-cream-dark px-6 py-20 md:px-12 md:py-32">
+  <div class="mx-auto max-w-6xl">
+    <div data-reveal class="max-w-2xl">
+      <p class="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-terracotta">
+        {eyebrow}
+      </p>
+      <h2 class="font-serif text-4xl leading-tight text-espresso md:text-5xl">
+        {title}
+      </h2>
+      <p class="mt-4 text-base leading-relaxed text-espresso/80 md:text-lg">
+        {intro}
+      </p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-10">
+      {items.map((item) => (
+        <div data-reveal class="group">
+          <div class="overflow-hidden rounded-xl">
+            <Photo
+              photo={photoByKey[item.key as keyof typeof photoByKey]}
+              class="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
+          <h3 class="mt-4 font-serif text-2xl text-espresso">{item.title}</h3>
+          <p class="mt-1 text-espresso/70">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

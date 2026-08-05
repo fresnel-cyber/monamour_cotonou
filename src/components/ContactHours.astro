@@ -1,0 +1,50 @@
+---
+import { sections, hours, business, ctaLinks } from '../content';
+import CTAButton from './CTAButton.astro';
+
+const { eyebrow, title } = sections.contact;
+---
+
+<section id="contact" class="bg-espresso px-6 py-20 text-cream md:px-12 md:py-32">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+    <div data-reveal>
+      <p class="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-terracotta">
+        {eyebrow}
+      </p>
+      <h2 class="font-serif text-4xl leading-tight md:text-5xl">
+        {title}
+      </h2>
+
+      <dl class="mt-8 space-y-3 text-cream/85">
+        {hours.display.map((row) => (
+          <div class="flex justify-between gap-4 border-b border-cream/15 py-2 text-base md:text-lg">
+            <dt>{row.days}</dt>
+            <dd class="font-medium">{row.hours}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+
+    <div data-reveal class="flex flex-col justify-center gap-6">
+      <div>
+        <p class="text-sm uppercase tracking-[0.2em] text-cream/60">Adresse</p>
+        <p class="mt-2 text-lg leading-relaxed text-cream/90">
+          {business.address.streetAddress}, {business.address.addressLocality}
+        </p>
+        <p class="mt-1 text-sm leading-relaxed text-cream/60">
+          {business.address.landmark}
+        </p>
+      </div>
+
+      <div>
+        <p class="text-sm uppercase tracking-[0.2em] text-cream/60">Téléphone / WhatsApp</p>
+        <p class="mt-2 text-lg text-cream/90">{business.phoneDisplay}</p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 pt-2">
+        <CTAButton href={ctaLinks.whatsapp} label="Écrire sur WhatsApp" icon="whatsapp" variant="primary" />
+        <CTAButton href={ctaLinks.call} label="Appeler" icon="call" variant="secondary" />
+      </div>
+    </div>
+  </div>
+</section>

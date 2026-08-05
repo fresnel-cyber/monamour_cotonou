@@ -1,0 +1,32 @@
+---
+import { sections, photos, ctaLinks } from '../content';
+import Photo from './Photo.astro';
+import CTAButton from './CTAButton.astro';
+
+const { eyebrow, title, subtitle } = sections.hero;
+---
+
+<section id="top" class="relative flex h-[100svh] min-h-[560px] w-full items-end overflow-hidden">
+  <Photo
+    photo={photos.hero}
+    priority
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/40 to-espresso/10" aria-hidden="true"></div>
+
+  <div class="relative z-10 w-full px-6 pb-16 md:px-12 md:pb-24">
+    <p class="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-cream/80">
+      {eyebrow}
+    </p>
+    <h1 class="max-w-2xl font-serif text-5xl leading-[1.05] text-cream sm:text-6xl md:text-7xl">
+      {title}
+    </h1>
+    <p class="mt-5 max-w-md text-base leading-relaxed text-cream/90 md:text-lg">
+      {subtitle}
+    </p>
+    <div class="mt-8 hidden gap-3 sm:flex">
+      <CTAButton href={ctaLinks.whatsapp} label="Écrire sur WhatsApp" icon="whatsapp" variant="primary" />
+      <CTAButton href={ctaLinks.call} label="Appeler" icon="call" variant="secondary" />
+    </div>
+  </div>
+</section>

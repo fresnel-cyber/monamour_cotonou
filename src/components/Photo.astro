@@ -1,0 +1,22 @@
+---
+import type { Photo } from '../content';
+
+interface Props {
+  photo: Photo;
+  class?: string;
+  priority?: boolean;
+}
+
+const { photo, class: className = '', priority = false } = Astro.props;
+---
+
+<img
+  src={photo.src}
+  alt={photo.alt}
+  width={photo.width}
+  height={photo.height}
+  loading={priority ? 'eager' : 'lazy'}
+  decoding={priority ? 'sync' : 'async'}
+  fetchpriority={priority ? 'high' : 'auto'}
+  class={className}
+/>

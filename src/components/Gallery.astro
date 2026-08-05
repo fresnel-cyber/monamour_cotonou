@@ -1,0 +1,41 @@
+---
+import { sections, photos } from '../content';
+import Photo from './Photo.astro';
+
+const { eyebrow, title } = sections.gallery;
+const [agneau, roses, guirlande, dessert, comptoir, homard] = photos.gallery;
+---
+
+<section class="px-6 py-20 md:px-12 md:py-32">
+  <div class="mx-auto max-w-6xl">
+    <div data-reveal class="mb-12 max-w-2xl">
+      <p class="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-terracotta">
+        {eyebrow}
+      </p>
+      <h2 class="font-serif text-4xl leading-tight text-espresso md:text-5xl">
+        {title}
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div data-reveal class="overflow-hidden rounded-xl md:col-span-2">
+        <Photo photo={agneau} class="h-[50vh] w-full object-cover md:h-[65vh]" />
+      </div>
+      <div data-reveal class="overflow-hidden rounded-xl">
+        <Photo photo={roses} class="h-[50vh] w-full object-cover md:h-[60vh]" />
+      </div>
+      <div data-reveal class="overflow-hidden rounded-xl">
+        <Photo photo={guirlande} class="h-[50vh] w-full object-cover md:h-[60vh]" />
+      </div>
+      <div data-reveal class="overflow-hidden rounded-xl md:col-span-2">
+        <Photo photo={dessert} class="h-[50vh] w-full object-cover md:h-[65vh]" />
+      </div>
+      <div data-reveal class="overflow-hidden rounded-xl">
+        <Photo photo={comptoir} class="h-[45vh] w-full object-cover md:h-[55vh]" />
+      </div>
+      <div data-reveal class="overflow-hidden rounded-xl">
+        <Photo photo={homard} class="h-[45vh] w-full object-cover md:h-[55vh]" />
+      </div>
+    </div>
+  </div>
+</section>

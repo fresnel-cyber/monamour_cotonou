@@ -1,0 +1,20 @@
+---
+import { site, ctaLinks } from '../content';
+import CTAButton from './CTAButton.astro';
+---
+
+<header class="absolute inset-x-0 top-0 z-40 flex items-center justify-between px-6 py-5 md:px-12 md:py-8">
+  <a href="#top" aria-label={site.name}>
+    <img
+      src="/assets/brand/logo-mon-amour-cream.png"
+      alt={site.name}
+      width="270"
+      height="228"
+      class="h-14 w-auto md:h-16"
+    />
+  </a>
+  <nav class="hidden items-center gap-3 md:flex" aria-label="Contact rapide">
+    <CTAButton href={ctaLinks.whatsapp} label="WhatsApp" icon="whatsapp" variant="secondary" />
+    <CTAButton href={ctaLinks.call} label="Appeler" icon="call" variant="secondary" />
+  </nav>
+</header>

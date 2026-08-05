@@ -1,0 +1,24 @@
+---
+import { ctaLinks } from '../content';
+import CTAButton from './CTAButton.astro';
+---
+
+<div
+  class="fixed inset-x-0 bottom-0 z-50 flex gap-2 border-t border-espresso/10 bg-cream/95 p-3 backdrop-blur supports-[backdrop-filter]:bg-cream/80 sm:hidden"
+  aria-label="Contacter Mon Amour"
+>
+  <CTAButton
+    href={ctaLinks.whatsapp}
+    label="WhatsApp"
+    icon="whatsapp"
+    variant="primary"
+    class="flex-1"
+  />
+  <CTAButton
+    href={ctaLinks.call}
+    label="Appeler"
+    icon="call"
+    variant="secondary"
+    class="flex-1 !border-espresso/30 !text-espresso hover:!border-espresso"
+  />
+</div>
