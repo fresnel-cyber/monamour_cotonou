@@ -1,6 +1,6 @@
 // Source unique de vérité pour tous les textes, coordonnées et métadonnées SEO.
-// Modifier ce fichier suffit pour mettre à jour le contenu du site — aucun
-// composant n'a besoin d'être touché.
+// Modifier ce fichier suffit pour mettre à jour le contenu du site, sans
+// toucher aux composants.
 
 export const site = {
   name: 'Mon Amour',
@@ -35,7 +35,7 @@ export const business = {
 export const hours = {
   closedDay: 'Lundi',
   display: [
-    { days: 'Mardi — Dimanche', hours: '9h00 – 22h00' },
+    { days: 'Mardi au Dimanche', hours: '9h00 à 22h00' },
     { days: 'Lundi', hours: 'Fermé' },
   ],
   // Format schema.org openingHoursSpecification
@@ -157,14 +157,14 @@ export const sections = {
     eyebrow: 'Camp Guezo, Cotonou',
     title: 'Mon Amour',
     subtitle:
-      'Un café, restaurant et pâtisserie cosy où prendre le temps — burgers, tartines et brunch du dimanche dans une ambiance calme.',
+      'Un café, restaurant et pâtisserie cosy où prendre le temps : burgers, tartines et brunch du dimanche dans une ambiance calme.',
   },
   about: {
     eyebrow: 'À propos',
     title: 'Une adresse pensée pour ralentir',
     paragraphs: [
       "Chez Mon Amour, l'idée est simple : offrir une bulle calme et chaleureuse au cœur de Cotonou, où l'on vient aussi bien pour un café en tête-à-tête que pour un déjeuner ou un dîner entre amis.",
-      "Ambiance cosy, service attentif et menu varié — de la pâtisserie maison aux burgers généreux — pensé pour accompagner chaque moment de la journée.",
+      "Ambiance cosy, service attentif et menu varié, de la pâtisserie maison aux burgers généreux, pensé pour accompagner chaque moment de la journée.",
     ],
   },
   menu: {
@@ -268,9 +268,9 @@ export const faq: FaqItem[] = [
 ];
 
 export const seo = {
-  title: 'Mon Amour — Café, Restaurant & Pâtisserie à Camp Guezo, Cotonou',
+  title: 'Mon Amour | Café, Restaurant & Pâtisserie à Camp Guezo, Cotonou',
   description:
-    "Café cosy et restaurant à Camp Guezo, Cotonou : burgers, tartines, brunch du dimanche et pâtisserie maison. Ouvert du mardi au dimanche, 9h–22h.",
+    "Café cosy et restaurant à Camp Guezo, Cotonou : burgers, tartines, brunch du dimanche et pâtisserie maison. Ouvert du mardi au dimanche, de 9h à 22h.",
   keywords: [
     'café Cotonou',
     'brunch Cotonou',
