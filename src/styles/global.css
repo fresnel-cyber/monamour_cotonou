@@ -11,6 +11,11 @@
   --color-terracotta: #c1653d;
   --color-terracotta-dark: #a34f2d;
   --color-gold: #c99a4a;
+
+  /* Rouge bordeaux de l'identité visuelle Mon Amour (bannière du logo, catalogue) */
+  --color-bordeaux: #6e1423;
+  --color-bordeaux-dark: #4a0d18;
+  --color-bordeaux-light: #8f2634;
 }
 
 html {

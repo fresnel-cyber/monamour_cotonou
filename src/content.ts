@@ -12,15 +12,16 @@ export const site = {
 export const business = {
   legalName: 'Mon Amour',
   type: 'CafeOrCoffeeShop' as const,
+  cuisine: 'Cuisine euro-asiatique',
   description:
-    "Café, restaurant et pâtisserie cosy au Camp Guezo à Cotonou. Burgers, tartines, brunch du dimanche et pâtisserie maison dans une ambiance calme et chaleureuse.",
+    "Café, restaurant et pâtisserie cosy au Camp Guezo à Cotonou, à la cuisine euro-asiatique. Burgers, tartines, brunch du dimanche et pâtisserie maison dans une ambiance calme et chaleureuse.",
   address: {
     streetAddress: 'Camp Guezo',
     addressLocality: 'Cotonou',
     addressCountry: 'BJ',
-    // Repère : près de l'Ambassade d'Allemagne, direction Moov, première rue à droite.
+    // Repère détaillé, repris de la fiche WhatsApp Business du restaurant.
     landmark:
-      "Près de l'Ambassade d'Allemagne, direction Moov, première rue à droite.",
+      "Derrière l'Immigration, direction générale Moov : prenez la voie pavée de Moov puis la première voie à droite. Mon Amour se situe à 100 mètres sur votre droite, face à un immeuble R+1, non loin de l'Ambassade du Luxembourg.",
   },
   phoneDisplay: '+229 01 91 69 53 53',
   // wa.me exige un numéro sans "+", sans espaces.
@@ -28,8 +29,9 @@ export const business = {
   telHref: 'tel:+2290191695353',
   instagram: '@monamour_cotonou',
   instagramUrl: 'https://www.instagram.com/monamour_cotonou/',
-  // TODO (Fresnel) : confirmer la gamme de prix réelle avant mise en ligne.
-  priceRange: '€€',
+  facebookUrl: 'https://www.facebook.com/monamour.cotonou',
+  // D'après le catalogue WhatsApp Business : plats entre 6 500 et 9 500 FCFA.
+  priceRange: '6 500 à 9 500 FCFA',
 } as const;
 
 export const hours = {
@@ -164,7 +166,7 @@ export const sections = {
     title: 'Une adresse pensée pour ralentir',
     paragraphs: [
       "Chez Mon Amour, l'idée est simple : offrir une bulle calme et chaleureuse au cœur de Cotonou, où l'on vient aussi bien pour un café en tête-à-tête que pour un déjeuner ou un dîner entre amis.",
-      "Ambiance cosy, service attentif et menu varié, de la pâtisserie maison aux burgers généreux, pensé pour accompagner chaque moment de la journée.",
+      "Ambiance cosy, service attentif et cuisine euro-asiatique généreuse, de la pâtisserie maison aux burgers, pensée pour accompagner chaque moment de la journée.",
     ],
   },
   menu: {
@@ -270,12 +272,13 @@ export const faq: FaqItem[] = [
 export const seo = {
   title: 'Mon Amour | Café, Restaurant & Pâtisserie à Camp Guezo, Cotonou',
   description:
-    "Café cosy et restaurant à Camp Guezo, Cotonou : burgers, tartines, brunch du dimanche et pâtisserie maison. Ouvert du mardi au dimanche, de 9h à 22h.",
+    "Café cosy et restaurant à cuisine euro-asiatique à Camp Guezo, Cotonou : burgers, tartines, brunch du dimanche et pâtisserie maison. Ouvert du mardi au dimanche, de 9h à 22h.",
   keywords: [
     'café Cotonou',
     'brunch Cotonou',
     'restaurant Camp Guezo',
     'pâtisserie Cotonou',
     'restaurant Cotonou',
+    'cuisine euro-asiatique Cotonou',
   ],
 } as const;

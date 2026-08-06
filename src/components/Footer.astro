@@ -7,13 +7,25 @@ const year = new Date().getFullYear();
 <footer class="bg-espresso px-6 py-8 pb-24 text-cream/60 sm:pb-8 md:px-12">
   <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 text-center text-sm sm:flex-row sm:justify-between sm:text-left">
     <p>&copy; {year} {site.name}. Tous droits réservés.</p>
-    <a
-      href={business.instagramUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="transition-colors hover:text-cream"
-    >
-      {business.instagram}
-    </a>
+    <div class="flex items-center gap-4">
+      <a
+        href={business.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="transition-colors hover:text-cream"
+      >
+        {business.instagram}
+      </a>
+      {business.facebookUrl && (
+        <a
+          href={business.facebookUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-colors hover:text-cream"
+        >
+          Facebook
+        </a>
+      )}
+    </div>
   </div>
 </footer>
